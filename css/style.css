@@ -786,7 +786,7 @@ section.bl-expand .bl-icon-close {
 }
 
 .personal-info a.btn:not(.btn-blog) {
-  margin-right: 25px;
+  margin-right: 5px;
 }
 
 .personal-info a.btn.btn-blog {
@@ -1385,16 +1385,16 @@ ul.social-intro li a {
   border-radius: 50%;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.facebook a {
+/* .bl-main>section:nth-child(4).bl-expand ul.social-intro li.facebook a {
   background: #3b5998;
-}
+} */
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.twitter a {
+.bl-main>section:nth-child(4).bl-expand ul.social-intro li.angellist a {
   background: #1da1f2;
 }
 
-.bl-main>section:nth-child(4).bl-expand ul.social-intro li.google-plus a {
-  background: #dd4b39;
+.bl-main>section:nth-child(4).bl-expand ul.social-intro li.github a {
+  background: #95dc30;
 }
 
 .bl-main>section:nth-child(4).bl-expand ul.social-intro li.linkedin a {

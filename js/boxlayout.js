@@ -126,6 +126,8 @@ var Boxlayout = (function() {
             isAnimating = true;
 
             var $currentPanel = $workPanels.eq(currentWorkPanel);
+            console.log("currentWorkPanel", currentWorkPanel, "totalWorkPanels", totalWorkPanels)
+
             currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel + 1 : 0;
             var $nextPanel = $workPanels.eq(currentWorkPanel);
 
@@ -141,10 +143,10 @@ var Boxlayout = (function() {
             }
 
             $nextPanel.addClass('bl-show-work');
-            if (video.paused !== true && video.ended !== true) {
-				video.pause();
-			}
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+            // if (video.paused !== true && video.ended !== true) {
+			// 	video.pause();
+			// }
+            // $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
             return false;
 
         });
@@ -157,6 +159,7 @@ var Boxlayout = (function() {
                     isAnimating = true;
 
                     var $currentPanel = $workPanels.eq(currentWorkPanel);
+                    console.log("currentWorkPanel", currentWorkPanel, "totalWorkPanels", totalWorkPanels )
                     currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel + 1 : 0;
                     var $nextPanel = $workPanels.eq(currentWorkPanel);
 
@@ -172,10 +175,10 @@ var Boxlayout = (function() {
                     }
 
                     $nextPanel.addClass('bl-show-work');
-                    if (video.paused !== true && video.ended !== true) {
-						video.pause();
-					}
-                    $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                    // if (video.paused !== true && video.ended !== true) {
+					// 	video.pause();
+					// }
+                    // $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
                     return false;
                 }
 
@@ -186,6 +189,8 @@ var Boxlayout = (function() {
                     isAnimating = true;
 
                     var $currentPanel = $workPanels.eq(currentWorkPanel);
+                    console.log("currentWorkPanel", currentWorkPanel, "totalWorkPanels", totalWorkPanels)
+
                     currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel - 1 : 0;
                     var $nextPanel = $workPanels.eq(currentWorkPanel);
 
@@ -201,10 +206,10 @@ var Boxlayout = (function() {
                     }
 
                     $nextPanel.addClass('bl-show-work');
-					if (video.paused !== true && video.ended !== true) {
-						video.pause();
-					}
-					$('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+					// if (video.paused !== true && video.ended !== true) {
+					// 	video.pause();
+					// }
+					// $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
                     return false;
                 }
 
@@ -234,7 +239,9 @@ var Boxlayout = (function() {
             isAnimating = true;
 
             var $currentPanel = $workPanels.eq(currentWorkPanel);
-            currentWorkPanel = currentWorkPanel < totalWorkPanels - 1 ? currentWorkPanel - 1 : 0;
+            console.log("currentWorkPanel", currentWorkPanel, "totalWorkPanels", totalWorkPanels)
+
+            currentWorkPanel = Math.abs(currentWorkPanel) < totalWorkPanels - 1 ? currentWorkPanel - 1 : 0;
             var $nextPanel = $workPanels.eq(currentWorkPanel);
 
             $currentPanel.removeClass('bl-show-work').addClass('bl-hide-current-work').on(transEndEventName, function(event) {
@@ -249,10 +256,10 @@ var Boxlayout = (function() {
             }
 
 			$nextPanel.addClass('bl-show-work');
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-			if (video.paused !== true && video.ended !== true) {
-				video.pause();
-			}
+            // $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			// if (video.paused !== true && video.ended !== true) {
+			// 	video.pause();
+			// }
             return false;
 
         });
@@ -264,10 +271,10 @@ var Boxlayout = (function() {
             $sectionWork.removeClass('bl-scale-down');
             $workPanelsContainer.removeClass('bl-panel-items-show');
             $workPanels.eq(currentWorkPanel).removeClass('bl-show-work');
-			if (video.paused !== true && video.ended !== true) {
-				video.pause();
-			}
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			// if (video.paused !== true && video.ended !== true) {
+			// 	video.pause();
+			// }
+            // $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
             return false;
 
         });
