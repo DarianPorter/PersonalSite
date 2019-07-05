@@ -45,14 +45,14 @@ body.blog .pagination li.active,
 .comments-form button:active,
 body.blog .btn.back:hover,
 .personal-info a.btn.btn-blog:hover  {
-	background: #ff00ff;
+	background: #c3426b;
 }
 .resume-card-name {
-	color: #ff00ff !important;
+	color: #c3426b !important;
 }
 body.blog .btn.back ,
 .personal-info a.btn.btn-blog {
-	border:1px solid #ff00ff;
+	border:1px solid #c3426b;
 }
 
 body.blog .btn.back, .personal-info a.btn.btn-blog:last-child{
