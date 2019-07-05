@@ -54,3 +54,7 @@ body.blog .btn.back ,
 .personal-info a.btn.btn-blog {
 	border:1px solid #ff00ff;
 }
+
+body.blog .btn.back, .personal-info a.btn.btn-blog:last-child{
+	margin-left: 5px; 
+}
